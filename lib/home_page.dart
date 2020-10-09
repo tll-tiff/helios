@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePage extends State<HomePage> {
   List<Map<String, Object>> _pages;
-  int _selectedPageIndex = 0;
+  int _selectedPageIndex = 1;
 
   @override
   void initState() {
@@ -47,7 +47,7 @@ class _HomePage extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectedPage,
         unselectedItemColor: Colors.black,
-        selectedItemColor: Colors.red,
+        selectedItemColor: Colors.blue,
         currentIndex: _selectedPageIndex,
         items: [
           BottomNavigationBarItem(
@@ -60,7 +60,7 @@ class _HomePage extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add_circle),
-            title: Text("Refil Request"),
+            title: Text("Refill Request"),
           ),
         ],
       ),
