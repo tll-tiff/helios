@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.helios">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
    <application
         android:label="helios"
         android:icon="@mipmap/ic_launcher">
@@ -27,6 +28,10 @@
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
               />
+              <!-- API key to enable maps-->
+              <meta-data
+               android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyCmRLWm2lCGf4kVCMYWnxIUIvkqY9MNPOs"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
