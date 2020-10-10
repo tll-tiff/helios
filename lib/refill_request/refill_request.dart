@@ -1,11 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'form_functions.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
 //The code for Refill Request will go here
 
 class RefillRequest extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
+    //FlatButton(
+    //onPressed: {
+    //DatePicker.showDatePicker(context,
+    //showTitleActions: true,
+    //minTime: DateTime.now(),
+    //maxTime: DateTime(2099, 1, 1),
+    //onChanged: (date) {
+    //print('change $date');
+    //}, onConfirm: (date) {
+    //print('confirm $date');
+    //}, currentTime: DateTime.now(), locale: LocaleType.zh
+    //),
+    //},
+    //child: Text(
+    //  'show date time picker (Chinese)',
+    //style: TextStyle(color: Colors.blue),
+    //),
+    //);
+
+    // initial state of page
+
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
@@ -20,14 +45,18 @@ class RefillRequest extends StatelessWidget {
                       height: 60,
                       width: 60,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          medPopUp(context);
+                        },
                         child: Image.asset('assets/add button.png', height: 50),
                       )),
                   new SizedBox(
                       height: 70,
                       width: 70,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          notifPopUp(context);
+                        },
                         child: Image.asset('assets/bell.png', height: 45),
                       ))
                 ],

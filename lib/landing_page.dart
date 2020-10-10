@@ -1,53 +1,63 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LandingPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _MyAppState();
-    //>>>>>>> Stashed changes
   }
 }
 
 class _MyAppState extends State<LandingPage> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        // creates white background; page
-        body: Column(children: [
-          Column(
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Image.asset('assets/helios.jpg'),
-                    Text('How Are You Feeling Today?')
-                  ],
-                ),
-              ]
+        // Scaffold: creates page
+        backgroundColor: Color(0xff80dfff),
+        body: Column(children: <Widget>[
+          Container(
+            height: 400,
+            alignment: (AlignmentDirectional.bottomCenter),
+            child: Image.asset('assets/brain.png', height: 200),
           ),
           Container(
-            child: Row(
-                children: <Widget> [
-                  FlatButton(
-                    onPressed: () {},
-                    child: Image.asset('assets/smiley.png', height: 40),
-                  ),
-                  FlatButton(
-                    onPressed: () {},
-                    child: Image.asset('assets/smiley.png', height: 40),
-                  ),
-                  FlatButton(
-                    onPressed: () {},
-                    child: Image.asset('assets/smiley.png', height: 40),
-                  ),
-                ]
+            padding: EdgeInsets.only(top: 30.0),
+            child: Text('Welcome Back!', style: GoogleFonts.comfortaa(color: Colors.white, fontSize: 30.0)),
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 20.0, top: 70.0, bottom: 60.0),
+            child: Column(children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(bottom: 20.0),
+                child: Row(
+                  children: <Widget>[
+                    Text('Username',
+                        style: GoogleFonts.comfortaa(color: Colors.white, fontSize: 20.0)),
+                    // ADD INPUT TEXTBOX
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    Text('Password',
+                        style: GoogleFonts.comfortaa(color: Colors.white, fontSize: 20.0)),
+                    // ADD INPUT TEXTBOX
+                  ],
+                ),
+              ),
+            ]),
+          ),
+          RaisedButton(
+            onPressed: () {}, // WHEN BUTTON PRESSED NAVIGATION BAR APPEARS
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
             ),
+            child: Text('LOGIN', style: TextStyle(fontSize: 25)),
           ),
         ]),
       ),
     );
   }
 }
-
-

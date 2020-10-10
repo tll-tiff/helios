@@ -1,3 +1,7 @@
 # This is a generated file; do not edit or check into version control.
-flutter_plugin_android_lifecycle=/Users/jakeblackstone/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.11/
-google_maps_flutter=/Users/jakeblackstone/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-0.5.33/
+flutter_plugin_android_lifecycle=/Users/tiffunny/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.11/
+google_maps_flutter=/Users/tiffunny/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-0.5.33/
+path_provider=/Users/tiffunny/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.18/
+path_provider_linux=/Users/tiffunny/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/
+path_provider_macos=/Users/tiffunny/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+4/
+path_provider_windows=/Users/tiffunny/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+1/
