@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'home_page.dart';
 import 'maps/maps.dart';
 import 'refill_request/refill_request.dart';
+import 'package:flutter_google_maps/flutter_google_maps.dart';
 
-main(){
+main() {
   runApp(MyApp());
 }
+
 //Routes for navigation
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
@@ -20,4 +22,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
