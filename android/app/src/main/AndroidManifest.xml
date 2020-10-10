@@ -29,9 +29,10 @@
               android:resource="@drawable/launch_background"
               />
               <!-- API key to enable maps-->
-                <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="@string/maps_api_key" />
+              <meta-data
+                  android:name="com.google.android.geo.API_KEY"
+                  android:value="AIzaSyCmRLWm2lCGf4kVCMYWnxIUIvkqY9MNPOs"
+                  />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
