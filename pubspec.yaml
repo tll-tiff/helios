@@ -35,6 +35,16 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_launcher_icons: ^0.8.1
+
+flutter_icons:
+  ios: true
+  android: true
+  image_path_ios: "assets/helios.jpg"
+  image_path_android: "assets/helios.jpg"
+  adaptive_icon_background: "assets/helios.jpg"
+  adaptive_icon_foreground: "assets/helios.jpg"
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -53,6 +63,7 @@ flutter:
       - assets/pill bottle.png
       - assets/bell.png
       - assets/smiley.png
+      - assets/brain.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
