@@ -27,45 +27,56 @@ class _MyAppState extends State<LandingPage> {
               children: [
                 Text('Welcome Back!',
                     style: GoogleFonts.comfortaa(
-                        color: Colors.white, fontSize: 30.0)
+                        color: Colors.white, fontSize: 30.0)),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 70.0, top: 35.0, bottom: 10.0),
+            child: Row(
+              children: <Widget>[
+                SizedBox(
+                  width: 250.0,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: 'email',
+                      labelStyle: TextStyle(
+                          color: Colors.white
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),),
+                  ),
                 ),
               ],
             ),
           ),
           Container(
-            padding: EdgeInsets.only(left: 20.0, top: 70.0, bottom: 60.0),
-            child: Column(children: <Widget>[
-              Container(
-                padding: EdgeInsets.only(bottom: 20.0),
-                child: Row(
-                  children: <Widget>[
-                    Text('Username',
-                        style: GoogleFonts.comfortaa(
-                            color: Colors.white, fontSize: 20.0)
+            padding: EdgeInsets.only(left: 70.0, top: 10.0, bottom: 60.0),
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 250.0,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: 'password',
+                      labelStyle: TextStyle(
+                        color: Colors.white
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
                     ),
-                    //Container(
-                     // height: 200.0,
-                     // child: TextField(
-                     //   decoration: InputDecoration(
-                     //       hintText: 'email'
-                    //    ),
-                   //   ),
-                    //)
-                  ],
+                  ),
                 ),
-              ),
-              Container(
-                child: Row(
-                  children: <Widget>[
-                    Text('Password',
-                        style: GoogleFonts.comfortaa(
-                            color: Colors.white, fontSize: 20.0)
-                    ),
-                    // ADD INPUT TEXTBOX
-                  ],
-                ),
-              ),
-            ]),
+              ],
+            ),
           ),
           RaisedButton(
             onPressed: () {}, // WHEN BUTTON PRESSED NAVIGATION BAR APPEARS
@@ -73,7 +84,11 @@ class _MyAppState extends State<LandingPage> {
               borderRadius: BorderRadius.circular(15.0),
             ),
             color: Color(0xffffffff),
-            child: Text('LOGIN', style: GoogleFonts.cabinCondensed(fontSize: 25, color: Color(0xff80dfff), fontWeight: FontWeight.bold )),
+            child: Text('LOGIN',
+                style: GoogleFonts.cabinCondensed(
+                    fontSize: 25,
+                    color: Color(0xff80dfff),
+                    fontWeight: FontWeight.bold)),
           ),
         ]),
       ),
