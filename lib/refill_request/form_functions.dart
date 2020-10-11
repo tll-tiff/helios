@@ -74,7 +74,7 @@ Future<String> medPopUp(BuildContext context) {
                       Navigator.of(context).pop(medController.text.toString());
                     },
                     color: Colors.grey,
-                    child: Text('Add', style: TextStyle(fontSize: 20.0, color: Colors.white)),
+                    child: Text('ADD', style: TextStyle(fontSize: 20.0, color: Colors.white)),
                   ),
                 ),
               ],

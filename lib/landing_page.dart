@@ -16,12 +16,12 @@ class _MyAppState extends State<LandingPage> {
         // Scaffold: creates page
         backgroundColor: Color(0xff80dfff),
         body: Column(children: <Widget>[
-          Container(
+          Container(                                              // Helios Logo
             height: 400,
             alignment: (AlignmentDirectional.bottomCenter),
             child: Image.asset('assets/brain.png', height: 200),
           ),
-          Container(
+          Container(                                              // Welcome Message
             padding: EdgeInsets.only(top: 30.0, left: 90.0),
             child: Row(
               children: [
@@ -31,13 +31,14 @@ class _MyAppState extends State<LandingPage> {
               ],
             ),
           ),
-          Container(
+          Container(                                              // Email Input Field
             padding: EdgeInsets.only(left: 70.0, top: 35.0, bottom: 10.0),
             child: Row(
               children: <Widget>[
                 SizedBox(
                   width: 250.0,
                   child: TextField(
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       labelText: 'email',
                       labelStyle: TextStyle(
@@ -54,13 +55,15 @@ class _MyAppState extends State<LandingPage> {
               ],
             ),
           ),
-          Container(
+          Container(                                                    // Password Input Field
             padding: EdgeInsets.only(left: 70.0, top: 10.0, bottom: 60.0),
             child: Row(
               children: [
                 SizedBox(
                   width: 250.0,
                   child: TextField(
+                    obscureText: true,
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       labelText: 'password',
                       labelStyle: TextStyle(
@@ -78,7 +81,7 @@ class _MyAppState extends State<LandingPage> {
               ],
             ),
           ),
-          RaisedButton(
+          RaisedButton(                                                      // Login Button
             onPressed: () {}, // WHEN BUTTON PRESSED NAVIGATION BAR APPEARS
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),

@@ -32,18 +32,18 @@ class Medication extends StatelessWidget {
     // initial state of page
 
     return Stack(children: <Widget>[
-      Image.asset("assets/ombre.png",
+      Image.asset("assets/ombre.png",                 // Background Image
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           fit: BoxFit.cover),
-      Scaffold(
+      Scaffold(                                       // Title Bar
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             title: Text('Helios'),
             backgroundColor: Color(0xaa66b3ff),
           ),
           body: Column(children: <Widget>[
-            Container(
+            Container(                          // Add Medication Button
                 child: Row(
               children: <Widget>[
                 SizedBox(
@@ -56,7 +56,7 @@ class Medication extends StatelessWidget {
                     child: Image.asset('assets/add button.png', height: 50),
                   ),
                 ),
-                SizedBox(
+                SizedBox(                         // Set Notifications Button
                     height: 70,
                     width: 70,
                     child: FlatButton(
@@ -67,7 +67,7 @@ class Medication extends StatelessWidget {
                     ))
               ],
             )),
-            Stack(
+            Stack(                                       // Pill Bottle for every day of the week
               children: [
                 FlatButton(
                   onPressed: () {
@@ -77,9 +77,9 @@ class Medication extends StatelessWidget {
                 ),
                 Positioned(
                   left: 90.0,
-                  top: 95.0,
+                  top: 85.0,
                   child: Text('Sunday',
-                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                      style: GoogleFonts.secularOne(fontSize: 25)),
                 ),
               ],
             ),
@@ -93,9 +93,9 @@ class Medication extends StatelessWidget {
                 ),
                 Positioned(
                   left: 90.0,
-                  top: 95.0,
+                  top: 85.0,
                   child: Text('Monday',
-                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                      style: GoogleFonts.secularOne(fontSize: 25)),
                 ),
               ],
             ),
@@ -109,9 +109,9 @@ class Medication extends StatelessWidget {
                 ),
                 Positioned(
                   left: 90.0,
-                  top: 95.0,
+                  top: 85.0,
                   child: Text('Tuesday',
-                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                      style: GoogleFonts.secularOne(fontSize: 25)),
                 ),
               ],
             ),
@@ -125,9 +125,9 @@ class Medication extends StatelessWidget {
                 ),
                 Positioned(
                   left: 90.0,
-                  top: 95.0,
+                  top: 85.0,
                   child: Text('Wednesday',
-                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                      style: GoogleFonts.secularOne(fontSize: 25)),
                 ),
               ],
             ),
@@ -141,9 +141,9 @@ class Medication extends StatelessWidget {
                 ),
                 Positioned(
                   left: 90.0,
-                  top: 95.0,
+                  top: 85.0,
                   child: Text('Thursday',
-                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                      style: GoogleFonts.secularOne(fontSize: 25)),
                 ),
               ],
             ),
@@ -157,9 +157,9 @@ class Medication extends StatelessWidget {
                 ),
                 Positioned(
                   left: 90.0,
-                  top: 95.0,
+                  top: 85.0,
                   child: Text('Friday',
-                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                      style: GoogleFonts.secularOne(fontSize: 25)),
                 ),
               ],
             ),
@@ -173,9 +173,9 @@ class Medication extends StatelessWidget {
                 ),
                 Positioned(
                   left: 90.0,
-                  top: 95.0,
+                  top: 85.0,
                   child: Text('Saturday',
-                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                      style: GoogleFonts.secularOne(fontSize: 25)),
                 ),
               ],
             ),
