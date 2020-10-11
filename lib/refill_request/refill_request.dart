@@ -1,15 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'form_functions.dart';
+import 'pill_bottle_forms.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
 //The code for Refill Request will go here
 
-class RefillRequest extends StatelessWidget {
-
+class Medication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     //FlatButton(
     //onPressed: {
     //DatePicker.showDatePicker(context,
@@ -31,74 +31,155 @@ class RefillRequest extends StatelessWidget {
 
     // initial state of page
 
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text('Helios'),
-              backgroundColor: Color(0xaa66b3ff),
+    return Stack(children: <Widget>[
+      Image.asset("assets/ombre.png",
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          fit: BoxFit.cover),
+      Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            title: Text('Helios'),
+            backgroundColor: Color(0xaa66b3ff),
+          ),
+          body: Column(children: <Widget>[
+            Container(
+                child: Row(
+              children: <Widget>[
+                SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: FlatButton(
+                    onPressed: () {
+                      medPopUp(context);
+                    },
+                    child: Image.asset('assets/add button.png', height: 50),
+                  ),
+                ),
+                SizedBox(
+                    height: 70,
+                    width: 70,
+                    child: FlatButton(
+                      onPressed: () {
+                        notifPopUp(context);
+                      },
+                      child: Image.asset('assets/bell.png', height: 45),
+                    ))
+              ],
+            )),
+            Stack(
+              children: [
+                FlatButton(
+                  onPressed: () {
+                    sundayInfo(context);
+                  },
+                  child: Image.asset('assets/pill bottle.png', height: 200.0),
+                ),
+                Positioned(
+                  left: 90.0,
+                  top: 95.0,
+                  child: Text('Sunday',
+                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                ),
+              ],
             ),
-            body: Column(children: <Widget>[
-              Container(
-                  child: Row(
-                children: <Widget>[
-                  new SizedBox(
-                      height: 60,
-                      width: 60,
-                      child: FlatButton(
-                        onPressed: () {
-                          medPopUp(context);
-                        },
-                        child: Image.asset('assets/add button.png', height: 50),
-                      )),
-                  new SizedBox(
-                      height: 70,
-                      width: 70,
-                      child: FlatButton(
-                        onPressed: () {
-                          notifPopUp(context);
-                        },
-                        child: Image.asset('assets/bell.png', height: 45),
-                      ))
-                ],
-              )),
-              Container(
-                  child: Column(children: <Widget>[
+            Stack(
+              children: [
                 FlatButton(
-                  onPressed: () {},
-                  child: Image.asset('assets/pill bottle.png', height: 100),
+                  onPressed: () {
+                    mondayInfo(context);
+                  },
+                  child: Image.asset('assets/pill bottle.png', height: 200.0),
                 ),
-                Text('Sunday'),
+                Positioned(
+                  left: 90.0,
+                  top: 95.0,
+                  child: Text('Monday',
+                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                ),
+              ],
+            ),
+            Stack(
+              children: [
                 FlatButton(
-                  onPressed: () {},
-                  child: Image.asset('assets/pill bottle.png', height: 100),
+                  onPressed: () {
+                    tuesdayInfo(context);
+                  },
+                  child: Image.asset('assets/pill bottle.png', height: 200.0),
                 ),
-                Text('Monday'),
+                Positioned(
+                  left: 90.0,
+                  top: 95.0,
+                  child: Text('Tuesday',
+                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                ),
+              ],
+            ),
+            Stack(
+              children: [
                 FlatButton(
-                  onPressed: () {},
-                  child: Image.asset('assets/pill bottle.png', height: 100),
+                  onPressed: () {
+                    wednesdayInfo(context);
+                  },
+                  child: Image.asset('assets/pill bottle.png', height: 200.0),
                 ),
-                Text('Tuesday'),
+                Positioned(
+                  left: 90.0,
+                  top: 95.0,
+                  child: Text('Wednesday',
+                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                ),
+              ],
+            ),
+            Stack(
+              children: [
                 FlatButton(
-                  onPressed: () {},
-                  child: Image.asset('assets/pill bottle.png', height: 100),
+                  onPressed: () {
+                    thursdayInfo(context);
+                  },
+                  child: Image.asset('assets/pill bottle.png', height: 200.0),
                 ),
-                Text('Wednesday'),
+                Positioned(
+                  left: 90.0,
+                  top: 95.0,
+                  child: Text('Thursday',
+                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                ),
+              ],
+            ),
+            Stack(
+              children: [
                 FlatButton(
-                  onPressed: () {},
-                  child: Image.asset('assets/pill bottle.png', height: 100),
+                  onPressed: () {
+                    fridayInfo(context);
+                  },
+                  child: Image.asset('assets/pill bottle.png', height: 200.0),
                 ),
-                Text('Thursday'),
+                Positioned(
+                  left: 90.0,
+                  top: 95.0,
+                  child: Text('Friday',
+                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
+                ),
+              ],
+            ),
+            Stack(
+              children: [
                 FlatButton(
-                  onPressed: () {},
-                  child: Image.asset('assets/pill bottle.png', height: 100),
+                  onPressed: () {
+                    satInfo(context);
+                  },
+                  child: Image.asset('assets/pill bottle.png', height: 200.0),
                 ),
-                Text('Friday'),
-                FlatButton(
-                  onPressed: () {},
-                  child: Image.asset('assets/pill bottle.png', height: 100),
+                Positioned(
+                  left: 90.0,
+                  top: 95.0,
+                  child: Text('Saturday',
+                      style: GoogleFonts.arimaMadurai(fontSize: 25)),
                 ),
-                Text('Saturday'),
-              ]))
-            ])));
+              ],
+            ),
+          ]))
+    ]);
   }
 }

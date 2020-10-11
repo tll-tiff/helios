@@ -27,8 +27,8 @@ class _HomePage extends State<HomePage> {
         'title': 'Home',
       },
       {
-        'page': RefillRequest(),
-        'title': 'Refill Request',
+        'page': Medication(),
+        'title': 'Medication',
       },
     ];
     super.initState();
@@ -60,7 +60,7 @@ class _HomePage extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add_circle),
-            title: Text("Refill Request"),
+            title: Text("Medication"),
           ),
         ],
       ),

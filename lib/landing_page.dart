@@ -22,8 +22,15 @@ class _MyAppState extends State<LandingPage> {
             child: Image.asset('assets/brain.png', height: 200),
           ),
           Container(
-            padding: EdgeInsets.only(top: 30.0),
-            child: Text('Welcome Back!', style: GoogleFonts.comfortaa(color: Colors.white, fontSize: 30.0)),
+            padding: EdgeInsets.only(top: 30.0, left: 90.0),
+            child: Row(
+              children: [
+                Text('Welcome Back!',
+                    style: GoogleFonts.comfortaa(
+                        color: Colors.white, fontSize: 30.0)
+                ),
+              ],
+            ),
           ),
           Container(
             padding: EdgeInsets.only(left: 20.0, top: 70.0, bottom: 60.0),
@@ -33,8 +40,17 @@ class _MyAppState extends State<LandingPage> {
                 child: Row(
                   children: <Widget>[
                     Text('Username',
-                        style: GoogleFonts.comfortaa(color: Colors.white, fontSize: 20.0)),
-                    // ADD INPUT TEXTBOX
+                        style: GoogleFonts.comfortaa(
+                            color: Colors.white, fontSize: 20.0)
+                    ),
+                    //Container(
+                     // height: 200.0,
+                     // child: TextField(
+                     //   decoration: InputDecoration(
+                     //       hintText: 'email'
+                    //    ),
+                   //   ),
+                    //)
                   ],
                 ),
               ),
@@ -42,7 +58,9 @@ class _MyAppState extends State<LandingPage> {
                 child: Row(
                   children: <Widget>[
                     Text('Password',
-                        style: GoogleFonts.comfortaa(color: Colors.white, fontSize: 20.0)),
+                        style: GoogleFonts.comfortaa(
+                            color: Colors.white, fontSize: 20.0)
+                    ),
                     // ADD INPUT TEXTBOX
                   ],
                 ),
@@ -54,7 +72,8 @@ class _MyAppState extends State<LandingPage> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
-            child: Text('LOGIN', style: TextStyle(fontSize: 25)),
+            color: Color(0xffffffff),
+            child: Text('LOGIN', style: GoogleFonts.cabinCondensed(fontSize: 25, color: Color(0xff80dfff), fontWeight: FontWeight.bold )),
           ),
         ]),
       ),

@@ -10,25 +10,34 @@ Future<String> medPopUp(BuildContext context) {
       context: context,
       builder: (context) {
         return AlertDialog(
+          title: Text('Add New Medication'),
+        shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+        ),
             content: Stack(
               overflow: Overflow.visible,
               children: <Widget>[
+                Image.asset('assets/med_form_background.jpg', height: 475.0,
+                    width: 300.0,
+                    fit: BoxFit.cover),
                 Container(
-                  height: 500.0,
+                  height: 450.0,
+                  width: 300.0,
                   child: Form(
                     child: Column(children: [
-                      Padding(
-                        padding: EdgeInsets.only(bottom: 30.0),
-                        child: Text('Add New Medication',
-                            style: GoogleFonts.comfortaa(
-                                color: Colors.black,
-                                fontSize: 20.0)), // title of form
-                      ),
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: TextFormField(
                           decoration:
                           InputDecoration(hintText: "Medication Name"),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              hintText: "Quantity" // placeholder for time dropdown
+                          ),
                         ),
                       ),
                       Padding(
@@ -59,13 +68,13 @@ Future<String> medPopUp(BuildContext context) {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 450.0, left: 60.0),
+                  padding: EdgeInsets.only(top: 400.0, left: 100.0),
                   child: FlatButton(
                     onPressed: () {
                       Navigator.of(context).pop(medController.text.toString());
                     },
-                    color: Color(0xaa66b3ff),
-                    child: Text('Add', style: TextStyle(fontSize: 20.0)),
+                    color: Colors.grey,
+                    child: Text('Add', style: TextStyle(fontSize: 20.0, color: Colors.white)),
                   ),
                 ),
               ],
@@ -81,19 +90,21 @@ Future<String> notifPopUp(BuildContext context) {
       context: context,
       builder: (context) {
         return AlertDialog(
+          title: Text('Get Notifications'),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
             content: Stack(
               overflow: Overflow.visible,
               children: <Widget>[
+                Image.asset('assets/form_background.jpg', height: 350.0,
+                    width: 300.0,
+                    fit: BoxFit.cover),
                 Container(
-                  height: 500.0,
+                  height: 320.0,
+                  width: 300.0,
                   child: Form(
                     child: Column(children: [
-                      Padding(
-                        padding: EdgeInsets.only(bottom: 30.0),
-                        child: Text('Get Notifications',
-                            style: GoogleFonts.comfortaa(
-                                color: Colors.black, fontSize: 20.0)),
-                      ),
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: TextFormField(
@@ -123,12 +134,12 @@ Future<String> notifPopUp(BuildContext context) {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 450.0, left: 45.0),
+                  padding: EdgeInsets.only(top: 300.0, left: 70.0),
                   child: FlatButton(
                     onPressed: () {
                       Navigator.of(context).pop(notifController.text.toString());
                     },
-                    color: Color(0xaa66b3ff),
+                    color: Colors.white,
                     child: Text('NOTIFY ME', style: TextStyle(fontSize: 20.0)),
                   ),
                 ),

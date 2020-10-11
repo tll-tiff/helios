@@ -4,7 +4,7 @@ import 'maps/maps.dart';
 import 'refill_request/refill_request.dart';
 
 
-//<<<<<<< Updated upstream
+
 main(){
   runApp(MyApp());
 }
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/maps': (context) => Maps(),
-        '/refillrequest': (context) => RefillRequest(),
+        '/medication': (context) => Medication(),
       },
     );
   }
